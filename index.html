@@ -1,0 +1,2141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Better Specialty Coffee | Specialty coffee in Sofia</title>
+    <meta
+      name="description"
+      content="Specialty coffee in Sofia — precision brew bar, single-origin beans, desserts, workspace Wi-Fi. Best coffee shop Sofia experience: menu, book a table, takeaway & preorder."
+    />
+    <meta
+      name="keywords"
+      content="specialty coffee Sofia, best coffee shop Sofia, third wave coffee Bulgaria, single origin Sofia, coffee bar Sofia, dessert coffee Sofia"
+    />
+    <link rel="canonical" href="https://betterspecialtycoffee.example/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Better Specialty Coffee | Sofia" />
+    <meta
+      property="og:description"
+      content="Specialty coffee brewed with precision in Sofia. View menu, book a table, preorder for pickup."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;w=1200&amp;h=630&amp;fit=crop&amp;fm=webp&amp;q=85"
+    />
+    <meta property="og:url" content="https://betterspecialtycoffee.example/" />
+    <meta property="og:locale" content="en_BG" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Better Specialty Coffee | Sofia" />
+    <meta
+      name="twitter:description"
+      content="Specialty coffee brewed with precision in Sofia."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;w=1200&amp;h=630&amp;fit=crop&amp;fm=webp&amp;q=85"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CafeOrCoffeeShop",
+        "name": "Better Specialty Coffee",
+        "description": "Specialty coffee shop and slow bar in Sofia with single-origin beans, desserts, and workspace seating.",
+        "url": "https://betterspecialtycoffee.example/",
+        "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&w=1200&fm=webp&q=85",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 Vitosha Boulevard (demo address — replace)",
+          "addressLocality": "Sofia",
+          "postalCode": "1000",
+          "addressCountry": "BG"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 42.6977,
+          "longitude": 23.3219
+        },
+        "servesCuisine": "Coffee, Desserts",
+        "priceRange": "$$"
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bone: "#FFFFFF",
+              forest: "#1B4332",
+              "coffee-brown": "#3C2A21",
+            },
+            fontFamily: {
+              sans: [
+                "Inter",
+                "ui-sans-serif",
+                "system-ui",
+                "sans-serif",
+              ],
+              serif: [
+                "Cormorant Garamond",
+                "Georgia",
+                "Times New Roman",
+                "serif",
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bsc-forest: #1b4332;
+        --bsc-forest-hover: #2d6a4f;
+        --bsc-coffee: #3c2a21;
+        --bsc-coffee-hover: #5c4033;
+        --bsc-grain-opacity: 0.14;
+        --bsc-cream: #f4e9d8;
+        --bsc-warm-beige: #c9b8a0;
+        --bsc-muted-black: #0f0e0c;
+        --bsc-espresso-rich: #2a1810;
+        --bsc-hero-bx: 50%;
+        --bsc-hero-by: 55%;
+      }
+
+      .bsc-grain {
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        opacity: var(--bsc-grain-opacity);
+        mix-blend-mode: overlay;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+        background-size: 140px 140px;
+      }
+
+      .bsc-grain-fine {
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        opacity: 0.055;
+        mix-blend-mode: soft-light;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.35' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.65'/%3E%3C/svg%3E");
+        background-size: 96px 96px;
+      }
+
+      .bsc-paper {
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        opacity: 0.22;
+        mix-blend-mode: soft-light;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04 0.09' numOctaves='3' seed='8'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23p)' opacity='0.45'/%3E%3C/svg%3E");
+        background-size: 320px 320px;
+      }
+
+      .bsc-hero-bloom {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 1.1s ease;
+        background: radial-gradient(
+          ellipse 58% 48% at var(--bsc-hero-bx) var(--bsc-hero-by),
+          rgba(244, 233, 216, 0.2) 0%,
+          rgba(244, 233, 216, 0.06) 32%,
+          transparent 68%
+        );
+        mix-blend-mode: soft-light;
+      }
+
+      #home-hero.is-bloom-ready .bsc-hero-bloom {
+        opacity: 1;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        #home-hero.is-bloom-ready .bsc-hero-bloom {
+          opacity: 0.32 !important;
+          background: radial-gradient(
+            ellipse 70% 55% at 50% 45%,
+            rgba(244, 233, 216, 0.12) 0%,
+            transparent 70%
+          );
+        }
+      }
+
+      .bsc-type-h1 {
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        line-height: 1.08;
+      }
+
+      .bsc-type-hero-sub {
+        font-size: 1.05rem;
+        line-height: 1.65;
+        color: rgba(255, 255, 255, 0.78);
+      }
+
+      @media (min-width: 640px) {
+        .bsc-type-hero-sub {
+          font-size: 1.125rem;
+        }
+      }
+
+      .bsc-type-kicker {
+        font-size: 0.625rem;
+        font-weight: 600;
+        letter-spacing: 0.42em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.38);
+      }
+
+      .bsc-type-section {
+        font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+        font-weight: 600;
+        letter-spacing: -0.015em;
+        line-height: 1.12;
+        font-size: clamp(1.85rem, 4vw, 2.75rem);
+        color: var(--bsc-cream);
+      }
+
+      .bsc-type-section-lead {
+        margin-top: 0.85rem;
+        max-width: 40rem;
+        font-size: 0.9375rem;
+        line-height: 1.65;
+        color: rgba(201, 184, 160, 0.92);
+      }
+
+      @media (min-width: 640px) {
+        .bsc-type-section-lead {
+          font-size: 1.0625rem;
+        }
+      }
+
+      .bsc-type-body {
+        font-size: 0.9375rem;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.68);
+      }
+
+      .bsc-type-card-title {
+        font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+        font-size: 1.35rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        color: var(--bsc-cream);
+      }
+
+      .bsc-type-label-caps {
+        font-size: 0.5625rem;
+        font-weight: 600;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.34);
+      }
+
+      .bsc-section-band {
+        background: linear-gradient(
+          180deg,
+          rgba(18, 17, 15, 0.55) 0%,
+          rgba(15, 14, 12, 0.2) 100%
+        );
+      }
+
+      .bsc-photo-frame {
+        position: relative;
+      }
+
+      .bsc-photo-frame::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        box-shadow:
+          inset 0 0 0 1px rgba(0, 0, 0, 0.35),
+          inset 0 0 100px rgba(0, 0, 0, 0.42);
+        mix-blend-mode: multiply;
+      }
+
+      .bsc-photo-frame img {
+        filter: contrast(1.06) saturate(0.9) brightness(0.93);
+      }
+
+      .bsc-photo-frame:hover img {
+        filter: contrast(1.08) saturate(0.94) brightness(0.95);
+      }
+
+      .bsc-surface {
+        position: relative;
+        z-index: 2;
+      }
+
+      .bsc-bean-card {
+        border: 1px solid var(--bsc-coffee);
+        background-color: rgba(255, 255, 255, 0.02);
+        transition:
+          border-color 0.55s ease,
+          box-shadow 0.55s ease,
+          transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+          background-color 0.55s ease;
+      }
+
+      .bsc-bean-card:hover {
+        border-color: var(--bsc-coffee-hover);
+        transform: translateY(-3px);
+        box-shadow: 0 18px 48px -14px rgba(60, 42, 33, 0.55);
+        background-color: rgba(255, 255, 255, 0.04);
+      }
+
+      .bsc-btn-forest {
+        background-color: var(--bsc-forest);
+        border-color: rgba(255, 255, 255, 0.12);
+        color: #fff;
+        transition:
+          background-color 0.45s ease,
+          border-color 0.45s ease,
+          transform 0.35s ease,
+          box-shadow 0.45s ease;
+      }
+
+      .bsc-btn-forest:hover {
+        background-color: var(--bsc-forest-hover);
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 0 1px rgba(45, 106, 79, 0.35);
+      }
+
+      .bsc-btn-forest:active {
+        transform: scale(0.98);
+      }
+
+      .bsc-btn-forest:focus-visible {
+        outline: 2px solid var(--bsc-forest-hover);
+        outline-offset: 3px;
+      }
+
+      .bsc-plan-label {
+        border-color: var(--bsc-coffee);
+        color: rgba(255, 255, 255, 0.75);
+        transition:
+          background-color 0.45s ease,
+          color 0.45s ease,
+          border-color 0.45s ease;
+      }
+
+      .bsc-plan-label:has(:checked) {
+        background-color: var(--bsc-forest);
+        color: #fff;
+        border-color: var(--bsc-forest-hover);
+      }
+
+      .bsc-plan-label:hover:not(:has(:checked)) {
+        border-color: var(--bsc-coffee-hover);
+        color: #fff;
+      }
+
+      .bsc-loading {
+        position: fixed;
+        inset: 0;
+        z-index: 60;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+        transition:
+          opacity 0.65s ease,
+          visibility 0.65s ease;
+      }
+
+      .bsc-loading--done {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .bsc-stir {
+        transform-origin: 60px 74px;
+        animation: bsc-stir-motion 1.2s ease-in-out infinite alternate;
+      }
+
+      @keyframes bsc-stir-motion {
+        from {
+          transform: rotate(-22deg);
+        }
+        to {
+          transform: rotate(22deg);
+        }
+      }
+
+      body.bsc-loading-active {
+        overflow: hidden;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .bsc-bean-card,
+        .bsc-btn-forest,
+        .bsc-plan-label {
+          transition-duration: 0.01ms !important;
+        }
+
+        .bsc-menu-card:hover {
+          transform: none;
+        }
+
+        #hero-bg-layer {
+          transform: none !important;
+        }
+
+        .bsc-stir {
+          animation: none;
+        }
+
+        .bsc-bean-card:hover {
+          transform: none;
+        }
+
+        .bsc-marquee-track {
+          animation: none !important;
+        }
+
+        .bsc-hero-video {
+          transform: none !important;
+        }
+
+        .bsc-reveal {
+          opacity: 1 !important;
+          transform: none !important;
+          transition: none !important;
+        }
+
+        .bsc-loading {
+          transition-duration: 0.2s;
+        }
+      }
+
+      .bsc-checkbox {
+        accent-color: var(--bsc-forest);
+      }
+
+      .bsc-header {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        border-bottom: 1px solid rgba(60, 42, 33, 0.65);
+        background: rgba(15, 14, 12, 0.88);
+        backdrop-filter: blur(12px);
+        transition: border-color 0.35s ease, background 0.35s ease;
+      }
+
+      @supports (backdrop-filter: blur(1px)) {
+        .bsc-header {
+          background: rgba(15, 14, 12, 0.72);
+        }
+      }
+
+      .bsc-reveal {
+        opacity: 0;
+        transform: translateY(1.5rem) skewY(0.35deg);
+        transition:
+          opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .bsc-reveal.is-visible {
+        opacity: 1;
+        transform: none;
+      }
+
+      .bsc-cta-primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background-color: var(--bsc-forest);
+        color: #fff;
+        padding: 0.9rem 1.75rem;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        transition:
+          background-color 0.4s ease,
+          box-shadow 0.45s ease,
+          transform 0.3s ease,
+          border-color 0.35s ease;
+      }
+
+      .bsc-cta-primary:hover {
+        background-color: var(--bsc-forest-hover);
+        box-shadow: 0 0 28px rgba(45, 106, 79, 0.35);
+      }
+
+      .bsc-cta-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(244, 233, 216, 0.35);
+        color: var(--bsc-cream);
+        padding: 0.9rem 1.75rem;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        transition:
+          background-color 0.35s ease,
+          border-color 0.35s ease,
+          box-shadow 0.45s ease,
+          transform 0.3s ease;
+      }
+
+      .bsc-cta-secondary:hover {
+        background-color: rgba(244, 233, 216, 0.06);
+        border-color: rgba(244, 233, 216, 0.55);
+        box-shadow: 0 0 22px rgba(244, 233, 216, 0.12);
+      }
+
+      .bsc-menu-filter {
+        transition:
+          background-color 0.35s ease,
+          border-color 0.35s ease,
+          color 0.35s ease,
+          box-shadow 0.45s ease;
+      }
+
+      .bsc-menu-filter:hover {
+        box-shadow: 0 0 18px rgba(45, 106, 79, 0.15);
+      }
+
+      .bsc-menu-card {
+        border: 1px solid rgba(60, 42, 33, 0.85);
+        background: rgba(255, 255, 255, 0.02);
+        transition:
+          border-color 0.45s ease,
+          transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.5s ease,
+          opacity 0.35s ease;
+      }
+
+      .bsc-menu-card:hover {
+        border-color: var(--bsc-coffee-hover);
+        transform: translateY(-4px);
+        box-shadow:
+          0 20px 50px -18px rgba(0, 0, 0, 0.65),
+          0 0 0 1px rgba(45, 106, 79, 0.15);
+      }
+
+      .bsc-menu-card.is-hidden {
+        display: none;
+      }
+
+      .bsc-marquee {
+        overflow: hidden;
+        mask-image: linear-gradient(
+          90deg,
+          transparent,
+          #000 6%,
+          #000 94%,
+          transparent
+        );
+      }
+
+      .bsc-marquee-track {
+        display: flex;
+        width: max-content;
+        gap: 1rem;
+        animation: bsc-marquee-scroll 42s linear infinite;
+      }
+
+      .bsc-marquee:hover .bsc-marquee-track {
+        animation-play-state: paused;
+      }
+
+      @keyframes bsc-marquee-scroll {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      .bsc-hero-video {
+        transform: scale(1.06);
+        will-change: transform;
+      }
+
+      .bsc-magnetic > a,
+      .bsc-magnetic > button {
+        transition: transform 0.22s ease-out;
+      }
+
+      .lang-btn.is-active {
+        background-color: var(--bsc-forest);
+        color: #fff;
+        box-shadow: 0 0 12px rgba(45, 106, 79, 0.35);
+      }
+    </style>
+  </head>
+  <body
+    class="min-h-screen bg-[#0f0e0c] text-[#e8dfd3] font-sans antialiased bsc-loading-active"
+  >
+    <div
+      id="bsc-loading"
+      class="bsc-loading"
+      role="alert"
+      aria-busy="true"
+      aria-label="Loading Better Specialty Coffee"
+    >
+      <div class="flex flex-col items-center gap-6 px-6 text-center">
+        <svg
+          width="140"
+          height="140"
+          viewBox="0 0 120 120"
+          class="text-white/90"
+          aria-hidden="true"
+        >
+          <path
+            d="M38 52 L38 86 Q38 96 60 96 Q82 96 82 86 L82 52"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.35"
+            stroke-linecap="round"
+          />
+          <path
+            d="M38 52 L82 52"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.2"
+            opacity="0.5"
+          />
+          <g class="bsc-stir">
+            <line
+              x1="60"
+              y1="28"
+              x2="60"
+              y2="80"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <circle
+              cx="60"
+              cy="24"
+              r="5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.2"
+            />
+          </g>
+        </svg>
+        <p class="max-w-xs text-[11px] font-medium uppercase tracking-[0.35em] text-white/50" data-i18n="loading_pour">
+          Steady pour. No rush.
+        </p>
+      </div>
+    </div>
+
+    <div class="bsc-grain" aria-hidden="true"></div>
+    <div class="bsc-grain-fine" aria-hidden="true"></div>
+    <div class="bsc-paper" aria-hidden="true"></div>
+
+    <div class="bsc-surface">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:text-black"
+      data-i18n="skip"
+      >Skip to content</a
+    >
+
+    <header class="bsc-header" role="banner">
+      <div
+        class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6 md:px-10"
+      >
+        <a
+          href="#home-hero"
+          class="flex shrink-0 items-center rounded-sm ring-1 ring-[#3c2a21]/70"
+          data-i18n-aria="aria_logo_home"
+        >
+          <img
+            src="logo.png"
+            width="120"
+            height="120"
+            class="h-11 w-11 object-contain md:h-12 md:w-12"
+            alt=""
+            data-i18n-alt="aria_logo_alt"
+            onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');"
+          />
+          <span
+            class="bsc-logo-fallback hidden h-11 w-11 p-0.5 md:h-12 md:w-12"
+            aria-hidden="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 100 100"
+              class="h-full w-full"
+            >
+              <rect width="100" height="100" rx="8" fill="#536841" />
+              <g fill="#f1f2e1" transform="translate(50,24)">
+                <ellipse cx="0" cy="14" rx="15" ry="17" />
+                <circle cx="-6.5" cy="11" r="2.2" />
+                <circle cx="6.5" cy="11" r="2.2" />
+                <path
+                  d="M-9 24 Q0 31 9 24"
+                  fill="none"
+                  stroke="#f1f2e1"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </g>
+              <text
+                x="50"
+                y="76"
+                text-anchor="middle"
+                fill="#f1f2e1"
+                font-family="Inter,system-ui,sans-serif"
+                font-size="14"
+                font-weight="700"
+              >
+                Better
+              </text>
+              <text
+                x="50"
+                y="91"
+                text-anchor="middle"
+                fill="#f1f2e1"
+                font-family="Inter,system-ui,sans-serif"
+                font-size="5.2"
+                letter-spacing="0.16em"
+              >
+                SPECIALTY COFFEE
+              </text>
+            </svg>
+          </span>
+        </a>
+        <nav
+          class="hidden min-w-0 flex-1 justify-center lg:flex"
+          data-i18n-aria="aria_nav"
+        >
+          <ul
+            class="flex flex-wrap justify-center gap-x-5 gap-y-1 text-[10px] font-medium uppercase tracking-[0.18em] text-[#c9b8a0] xl:gap-x-7 xl:text-[11px]"
+          >
+            <li><a href="#menu" class="transition-colors hover:text-white" data-i18n="nav_menu">Menu</a></li>
+            <li><a href="#gallery" class="transition-colors hover:text-white" data-i18n="nav_gallery">Gallery</a></li>
+            <li><a href="#why" class="transition-colors hover:text-white" data-i18n="nav_why">Why us</a></li>
+            <li><a href="#identity" class="transition-colors hover:text-white" data-i18n="nav_id">Character</a></li>
+            <li><a href="#reviews" class="transition-colors hover:text-white" data-i18n="nav_reviews">Reviews</a></li>
+            <li><a href="#about" class="transition-colors hover:text-white" data-i18n="nav_about">About</a></li>
+            <li><a href="#book" class="transition-colors hover:text-white" data-i18n="nav_book">Book</a></li>
+            <li><a href="#shop" class="transition-colors hover:text-white" data-i18n="nav_beans">Beans</a></li>
+            <li><a href="#guides" class="transition-colors hover:text-white" data-i18n="nav_brew">Brew</a></li>
+            <li><a href="#subscription" class="transition-colors hover:text-white" data-i18n="nav_club">Club</a></li>
+            <li><a href="#order" class="transition-colors hover:text-white" data-i18n="nav_order">Order</a></li>
+            <li><a href="#visit" class="transition-colors hover:text-white" data-i18n="nav_visit">Visit</a></li>
+          </ul>
+        </nav>
+        <div
+          class="flex shrink-0 items-center gap-0.5 rounded border border-[#3c2a21]/75 bg-black/50 p-0.5"
+          role="group"
+          data-i18n-aria="aria_language"
+        >
+          <button
+            type="button"
+            class="lang-btn rounded px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider text-[#c9b8a0] transition-colors hover:text-white"
+            data-set-lang="en"
+            aria-pressed="false"
+          >
+            EN
+          </button>
+          <button
+            type="button"
+            class="lang-btn rounded px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider text-[#c9b8a0] transition-colors hover:text-white"
+            data-set-lang="bg"
+            aria-pressed="false"
+          >
+            BG
+          </button>
+        </div>
+      </div>
+      <nav
+        class="border-t border-[#3c2a21]/55 lg:hidden"
+        data-i18n-aria="aria_mobile_nav"
+      >
+        <ul
+          class="flex snap-x snap-mandatory gap-1 overflow-x-auto px-3 py-2 text-[9px] font-medium uppercase tracking-[0.14em] text-[#c9b8a0]"
+        >
+          <li class="shrink-0 snap-start">
+            <a class="block rounded px-2 py-1 hover:bg-white/5 hover:text-white" href="#menu" data-i18n="nav_menu">Menu</a>
+          </li>
+          <li class="shrink-0 snap-start">
+            <a class="block rounded px-2 py-1 hover:bg-white/5 hover:text-white" href="#gallery" data-i18n="nav_gallery">Gallery</a>
+          </li>
+          <li class="shrink-0 snap-start">
+            <a class="block rounded px-2 py-1 hover:bg-white/5 hover:text-white" href="#why" data-i18n="nav_why">Why</a>
+          </li>
+          <li class="shrink-0 snap-start">
+            <a class="block rounded px-2 py-1 hover:bg-white/5 hover:text-white" href="#identity" data-i18n="nav_id">Character</a>
+          </li>
+          <li class="shrink-0 snap-start">
+            <a class="block rounded px-2 py-1 hover:bg-white/5 hover:text-white" href="#reviews" data-i18n="nav_reviews">Reviews</a>
+          </li>
+          <li class="shrink-0 snap-start">
+            <a class="block rounded px-2 py-1 hover:bg-white/5 hover:text-white" href="#about" data-i18n="nav_about">About</a>
+          </li>
+          <li class="shrink-0 snap-start">
+            <a class="block rounded px-2 py-1 hover:bg-white/5 hover:text-white" href="#book" data-i18n="nav_book">Book</a>
+          </li>
+          <li class="shrink-0 snap-start">
+            <a class="block rounded px-2 py-1 hover:bg-white/5 hover:text-white" href="#shop" data-i18n="nav_beans">Beans</a>
+          </li>
+          <li class="shrink-0 snap-start">
+            <a class="block rounded px-2 py-1 hover:bg-white/5 hover:text-white" href="#guides" data-i18n="nav_brew">Brew</a>
+          </li>
+          <li class="shrink-0 snap-start">
+            <a class="block rounded px-2 py-1 hover:bg-white/5 hover:text-white" href="#order" data-i18n="nav_order">Order</a>
+          </li>
+          <li class="shrink-0 snap-start">
+            <a class="block rounded px-2 py-1 hover:bg-white/5 hover:text-white" href="#visit" data-i18n="nav_visit">Visit</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section
+        id="home-hero"
+        class="relative flex min-h-[88vh] flex-col justify-end overflow-hidden md:justify-center"
+        aria-labelledby="hero-heading"
+      >
+        <div id="hero-bg-layer" class="pointer-events-none absolute inset-0 z-0">
+          <video
+            id="hero-bg-video"
+            class="bsc-hero-video absolute left-1/2 top-1/2 h-[120%] min-h-full w-auto min-w-full -translate-x-1/2 -translate-y-1/2 object-cover"
+            autoplay
+            muted
+            loop
+            playsinline
+            poster="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&w=1920&q=80&fm=webp"
+          >
+            <source
+              src="https://videos.pexels.com/video-files/3024681/3024681-hd_1920_1080_25fps.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-[#0f0e0c]"
+            aria-hidden="true"
+          ></div>
+          <div class="bsc-hero-bloom" aria-hidden="true"></div>
+        </div>
+        <div
+          class="relative z-10 mx-auto w-full max-w-6xl px-4 pb-16 pt-28 sm:px-6 sm:pb-20 sm:pt-32 md:py-24"
+        >
+          <p
+            class="bsc-type-kicker max-w-4xl"
+            data-i18n="hero_eyebrow"
+          >
+            Sofia · Specialty slow bar
+          </p>
+          <h1
+            id="hero-heading"
+            class="bsc-type-h1 mt-5 max-w-4xl font-serif text-[2.35rem] text-[#f4e9d8] sm:text-5xl md:text-6xl lg:text-[4.25rem]"
+            data-i18n="hero_title"
+          >
+            Specialty coffee brewed with precision in Sofia.
+          </h1>
+          <p
+            class="bsc-type-hero-sub mt-6 max-w-xl"
+            data-i18n="hero_sub"
+          >
+            Third-wave bar, single-origin on bar and on plate. Pull up, dial in, stay
+            for the pour.
+          </p>
+          <div class="mt-10 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:items-center sm:gap-4">
+            <span class="bsc-magnetic inline-flex w-full sm:w-auto"
+              ><a class="bsc-cta-primary w-full justify-center sm:w-auto" href="#menu" data-i18n="cta_menu"
+                >View Menu</a
+              ></span
+            >
+            <span class="bsc-magnetic inline-flex w-full sm:w-auto"
+              ><a class="bsc-cta-secondary w-full justify-center sm:w-auto" href="#book" data-i18n="cta_book"
+                >Book a Table</a
+              ></span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="gallery"
+        class="border-t border-[#3C2A21]/40 scroll-mt-28"
+        aria-labelledby="gallery-heading"
+      >
+        <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 md:px-10 md:py-20">
+          <h2
+            id="gallery-heading"
+            class="bsc-reveal bsc-type-section"
+            data-i18n="gallery_title"
+          >
+            Inside the bar
+          </h2>
+          <p class="bsc-reveal bsc-type-section-lead" data-i18n="gallery_lead">
+            Replace these documentary-style placeholders with your own barista,
+            interior, beans, brew, guests, and pastry shots — same grid, your heat.
+          </p>
+          <div
+            class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+          >
+            <figure class="bsc-reveal bsc-photo-frame group overflow-hidden border border-[#3c2a21]/80">
+              <img
+                src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&w=800&h=560&fit=crop&q=82&fm=webp"
+                width="800"
+                height="560"
+                class="aspect-[5/4] h-auto w-full object-cover transition duration-700 group-hover:scale-[1.02]"
+                alt="Hands pouring steamed milk into espresso — replace with your bar"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption class="bsc-type-label-caps px-3 py-2" data-i18n="cap_barista">
+                Barista craft
+              </figcaption>
+            </figure>
+            <figure class="bsc-reveal bsc-photo-frame group overflow-hidden border border-[#3c2a21]/80">
+              <img
+                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&w=800&h=560&fit=crop&q=82&fm=webp"
+                width="800"
+                height="560"
+                class="aspect-[5/4] h-auto w-full object-cover transition duration-700 group-hover:scale-[1.02]"
+                alt="Dim café interior with guests — replace with your space"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption class="bsc-type-label-caps px-3 py-2" data-i18n="cap_interior">
+                Interior
+              </figcaption>
+            </figure>
+            <figure class="bsc-reveal bsc-photo-frame group overflow-hidden border border-[#3c2a21]/80">
+              <img
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&w=800&h=560&fit=crop&q=82&fm=webp"
+                width="800"
+                height="560"
+                class="aspect-[5/4] h-auto w-full object-cover transition duration-700 group-hover:scale-[1.02]"
+                alt="Roasted beans in low light — replace with your roast"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption class="bsc-type-label-caps px-3 py-2" data-i18n="cap_beans">
+                Green & roast
+              </figcaption>
+            </figure>
+            <figure class="bsc-reveal bsc-photo-frame group overflow-hidden border border-[#3c2a21]/80">
+              <img
+                src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&w=800&h=560&fit=crop&q=82&fm=webp"
+                width="800"
+                height="560"
+                class="aspect-[5/4] h-auto w-full object-cover transition duration-700 group-hover:scale-[1.02]"
+                alt="Pour-over in motion — replace with your ritual"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption class="bsc-type-label-caps px-3 py-2" data-i18n="cap_brew">
+                Brewing
+              </figcaption>
+            </figure>
+            <figure class="bsc-reveal bsc-photo-frame group overflow-hidden border border-[#3c2a21]/80">
+              <img
+                src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&w=800&h=560&fit=crop&q=82&fm=webp"
+                width="800"
+                height="560"
+                class="aspect-[5/4] h-auto w-full object-cover transition duration-700 group-hover:scale-[1.02]"
+                alt="People sharing coffee at a table — replace with your crowd"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption class="bsc-type-label-caps px-3 py-2" data-i18n="cap_guests">
+                Guests
+              </figcaption>
+            </figure>
+            <figure class="bsc-reveal bsc-photo-frame group overflow-hidden border border-[#3c2a21]/80">
+              <img
+                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&w=800&h=560&fit=crop&q=82&fm=webp"
+                width="800"
+                height="560"
+                class="aspect-[5/4] h-auto w-full object-cover transition duration-700 group-hover:scale-[1.02]"
+                alt="Chocolate dessert in mood light — replace with your pastry case"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption class="bsc-type-label-caps px-3 py-2" data-i18n="cap_desserts">
+                Desserts
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="why"
+        class="border-t border-[#3C2A21]/40 scroll-mt-28"
+        aria-labelledby="why-heading"
+      >
+        <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 md:px-10 md:py-20">
+          <h2
+            id="why-heading"
+            class="bsc-reveal bsc-type-section"
+            data-i18n="why_title"
+          >
+            Why Better?
+          </h2>
+          <p class="bsc-reveal bsc-type-section-lead" data-i18n="why_lead">
+            Four promises we repeat until they’re boring — because boring consistency
+            is what great cups are built on.
+          </p>
+          <div class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+            <article
+              class="bsc-reveal border border-[#3c2a21]/85 bg-white/[0.02] p-6 transition hover:border-[#5c4033]"
+            >
+              <h3 class="bsc-type-card-title" data-i18n="why_c1t">Single origin beans</h3>
+              <p class="bsc-type-body mt-3" data-i18n="why_c1p">
+                Traceable lots, rotated seasonally, dialled on bar with the same
+                obsession you’d expect from a cupping table.
+              </p>
+            </article>
+            <article
+              class="bsc-reveal border border-[#3c2a21]/85 bg-white/[0.02] p-6 transition hover:border-[#5c4033]"
+            >
+              <h3 class="bsc-type-card-title" data-i18n="why_c2t">Fresh roasting</h3>
+              <p class="bsc-type-body mt-3" data-i18n="why_c2p">
+                Roasted-on dates on the board, rest windows respected, espresso
+                pulled like the beans still remember the farm.
+              </p>
+            </article>
+            <article
+              class="bsc-reveal border border-[#3c2a21]/85 bg-white/[0.02] p-6 transition hover:border-[#5c4033]"
+            >
+              <h3 class="bsc-type-card-title" data-i18n="why_c3t">Specialty desserts</h3>
+              <p class="bsc-type-body mt-3" data-i18n="why_c3p">
+                Pastry that can stand next to a washed Yirgacheffe — butter, fruit,
+                and bitterness in balance, not sugar cover-ups.
+              </p>
+            </article>
+            <article
+              class="bsc-reveal border border-[#3c2a21]/85 bg-white/[0.02] p-6 transition hover:border-[#5c4033]"
+            >
+              <h3 class="bsc-type-card-title" data-i18n="why_c4t">Fast Wi-Fi · workspace</h3>
+              <p class="bsc-type-body mt-3" data-i18n="why_c4p">
+                Quiet corners, power at the banquette, light that doesn’t shame your
+                laptop. Stay one cup or five.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="identity"
+        class="bsc-section-band border-t border-[#3C2A21]/40 scroll-mt-28"
+        aria-labelledby="identity-heading"
+      >
+        <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:px-10 md:py-24">
+          <p class="bsc-reveal bsc-type-label-caps" data-i18n="id_eyebrow">
+            Not a franchise story
+          </p>
+          <h2
+            id="identity-heading"
+            class="bsc-reveal bsc-type-section mt-4"
+            data-i18n="id_title"
+          >
+            Better is a bar with opinions
+          </h2>
+          <p class="bsc-reveal bsc-type-section-lead max-w-3xl" data-i18n="id_lead">
+            We’re not a polished franchise template — we’re a small crew choosing harder
+            beans, slower pours, and honest dates on the board. Here’s what that sounds
+            like in practice.
+          </p>
+          <div class="mt-14 grid gap-10 md:grid-cols-2 md:gap-x-12 md:gap-y-12">
+            <article class="bsc-reveal border-l-2 border-[#2d6a4f]/55 pl-6 md:pl-8">
+              <h3 class="bsc-type-card-title" data-i18n="id_b1t">Philosophy: minimum viable hype</h3>
+              <p class="bsc-type-body mt-4" data-i18n="id_b1p">
+                The name is intentional: Better is the floor, not the ceiling. If it
+                doesn’t taste better than yesterday’s dial-in, it doesn’t leave the bar
+                — whether you’re ordering an espresso flight or a humble filter.
+              </p>
+            </article>
+            <article class="bsc-reveal border-l-2 border-[#3c2a21]/90 pl-6 md:pl-8">
+              <h3 class="bsc-type-card-title" data-i18n="id_b2t">Roasting &amp; QC</h3>
+              <p class="bsc-type-body mt-4" data-i18n="id_b2p">
+                We chase profiles that survive milk and still whisper origin on filter —
+                lighter where the cup needs air, settled where chocolate carries the day.
+                Lots rotate; the language on the menu doesn’t sugar-coat terroir.
+              </p>
+            </article>
+            <article class="bsc-reveal border-l-2 border-[#3c2a21]/90 pl-6 md:pl-8">
+              <h3 class="bsc-type-card-title" data-i18n="id_b3t">Community over performance</h3>
+              <p class="bsc-type-body mt-4" data-i18n="id_b3p">
+                The bar is a room first, a stage second — students, regulars, tourists,
+                and nerds arguing TDS share the same rail. Specialty can be serious
+                without being cold; we roast for the people who actually show up.
+              </p>
+            </article>
+            <article class="bsc-reveal border-l-2 border-[#5c4033]/70 pl-6 md:pl-8">
+              <h3 class="bsc-type-card-title" data-i18n="id_b4t">The skull is intentional</h3>
+              <p class="bsc-type-body mt-4" data-i18n="id_b4p">
+                Forest green, bone, a winking mascot — a reminder not to confuse
+                reverence with pretence. Playful badge, ruthless cupping standards. If
+                the vibe feels human, the discipline behind it is twice as strict.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="menu"
+        class="border-t border-[#3C2A21]/40 scroll-mt-28"
+        aria-labelledby="menu-heading"
+      >
+        <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 md:px-10 md:py-20">
+          <h2
+            id="menu-heading"
+            class="bsc-reveal bsc-type-section"
+            data-i18n="menu_title"
+          >
+            Digital menu
+          </h2>
+          <p class="bsc-reveal bsc-type-section-lead" data-i18n="menu_lead">
+            Categories, filters, and the nerdy detail specialty drinkers actually read.
+            Badges flag vegan, seasonal, and what’s flying out of the machine.
+          </p>
+          <div
+            class="bsc-reveal mt-8 flex flex-col gap-4 border border-[#3c2a21]/80 bg-black/30 p-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-6 sm:p-5"
+            role="toolbar"
+            aria-label="Menu filters"
+          >
+            <div
+              id="menu-category-filters"
+              class="flex flex-wrap gap-2"
+              role="group"
+              aria-label="Category"
+            >
+              <button
+                type="button"
+                class="bsc-menu-filter is-active border border-[#3c2a21]/90 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/80 transition hover:border-[#5c4033]"
+                data-menu-filter="all"
+                data-i18n="mf_all"
+              >
+                All
+              </button>
+              <button
+                type="button"
+                class="bsc-menu-filter border border-[#3c2a21]/90 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/80 transition hover:border-[#5c4033]"
+                data-menu-filter="espresso"
+                data-i18n="mf_espresso"
+              >
+                Espresso
+              </button>
+              <button
+                type="button"
+                class="bsc-menu-filter border border-[#3c2a21]/90 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/80 transition hover:border-[#5c4033]"
+                data-menu-filter="filter"
+                data-i18n="mf_filter"
+              >
+                Filter
+              </button>
+              <button
+                type="button"
+                class="bsc-menu-filter border border-[#3c2a21]/90 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/80 transition hover:border-[#5c4033]"
+                data-menu-filter="cold"
+                data-i18n="mf_cold"
+              >
+                Cold
+              </button>
+              <button
+                type="button"
+                class="bsc-menu-filter border border-[#3c2a21]/90 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/80 transition hover:border-[#5c4033]"
+                data-menu-filter="dessert"
+                data-i18n="mf_dessert"
+              >
+                Desserts
+              </button>
+            </div>
+            <label
+              class="flex cursor-pointer items-center gap-2 text-xs text-white/65"
+            >
+              <input
+                id="menu-vegan-only"
+                type="checkbox"
+                class="bsc-checkbox h-4 w-4"
+              />
+              <span data-i18n="menu_vegan_only">Vegan only</span>
+            </label>
+          </div>
+          <div
+            id="menu-card-grid"
+            class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6"
+          >
+            <article
+              class="bsc-menu-card bsc-reveal flex flex-col overflow-hidden"
+              data-menu-cat="espresso"
+              data-vegan="false"
+              data-badges="seasonal bestseller"
+            >
+              <div class="relative aspect-[4/3] w-full overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&w=720&h=540&fit=crop&q=80&fm=webp"
+                  width="720"
+                  height="540"
+                  class="h-full w-full object-cover"
+                  alt="Espresso in a ceramic cup — Ethiopia Yirgacheffe special"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="absolute left-2 top-2 flex flex-wrap gap-1">
+                  <span
+                    class="bg-[#1b4332]/95 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-white"
+                    >Seasonal</span
+                  >
+                  <span
+                    class="bg-[#3c2a21]/95 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#f4e9d8]"
+                    >Bestseller</span
+                  >
+                </div>
+              </div>
+              <div class="flex flex-1 flex-col p-5">
+                <div class="flex items-start justify-between gap-2">
+                  <h3 class="font-serif text-xl text-[#f4e9d8]">Ethiopia Yirgacheffe</h3>
+                  <span class="shrink-0 text-sm text-[#c9b8a0]">12 lv</span>
+                </div>
+                <p class="mt-1 text-[11px] uppercase tracking-wider text-white/40">
+                  Espresso · Washed
+                </p>
+                <p class="mt-3 text-sm leading-relaxed text-white/65">
+                  Origin Ethiopia Yirgacheffe — floral, citrus, honey. Light roast
+                  profile, high clarity.
+                </p>
+                <dl class="mt-4 space-y-1 text-xs text-white/55">
+                  <div class="flex justify-between gap-2 border-t border-[#3c2a21]/50 pt-2">
+                    <dt>Roast</dt>
+                    <dd class="text-white/80">Light</dd>
+                  </div>
+                  <div class="flex justify-between gap-2">
+                    <dt>Process</dt>
+                    <dd class="text-white/80">Washed</dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+            <article
+              class="bsc-menu-card bsc-reveal flex flex-col overflow-hidden"
+              data-menu-cat="espresso"
+              data-vegan="false"
+              data-badges="bestseller"
+            >
+              <div class="relative aspect-[4/3] w-full overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&w=720&h=540&fit=crop&q=80&fm=webp"
+                  width="720"
+                  height="540"
+                  class="h-full w-full object-cover"
+                  alt="Cappuccino with latte art"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span
+                  class="absolute left-2 top-2 bg-[#3c2a21]/95 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#f4e9d8]"
+                  >Bestseller</span
+                >
+              </div>
+              <div class="flex flex-1 flex-col p-5">
+                <div class="flex items-start justify-between gap-2">
+                  <h3 class="font-serif text-xl text-[#f4e9d8]">Night Shift Cappuccino</h3>
+                  <span class="text-sm text-[#c9b8a0]">11 lv</span>
+                </div>
+                <p class="mt-1 text-[11px] uppercase tracking-wider text-white/40">
+                  Espresso + milk · Brazil / Colombia
+                </p>
+                <p class="mt-3 text-sm text-white/65">
+                  Medium roast blend — cocoa, hazelnut, dried cherry. Built for
+                  everyday ritual.
+                </p>
+                <dl class="mt-4 space-y-1 text-xs text-white/55">
+                  <div class="flex justify-between gap-2 border-t border-[#3c2a21]/50 pt-2">
+                    <dt>Roast</dt>
+                    <dd class="text-white/80">Medium</dd>
+                  </div>
+                  <div class="flex justify-between gap-2">
+                    <dt>Process</dt>
+                    <dd class="text-white/80">Natural / washed blend</dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+            <article
+              class="bsc-menu-card bsc-reveal flex flex-col overflow-hidden"
+              data-menu-cat="filter"
+              data-vegan="true"
+              data-badges="vegan"
+            >
+              <div class="relative aspect-[4/3] w-full overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&w=720&h=540&fit=crop&q=80&fm=webp"
+                  width="720"
+                  height="540"
+                  class="h-full w-full object-cover"
+                  alt="V60 pour-over brewing"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span
+                  class="absolute left-2 top-2 bg-[#1b4332]/95 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-white"
+                  >Vegan</span
+                >
+              </div>
+              <div class="flex flex-1 flex-col p-5">
+                <div class="flex items-start justify-between gap-2">
+                  <h3 class="font-serif text-xl text-[#f4e9d8]">Kenya Kirinyaga V60</h3>
+                  <span class="text-sm text-[#c9b8a0]">13 lv</span>
+                </div>
+                <p class="mt-1 text-[11px] uppercase tracking-wider text-white/40">
+                  Filter · SL28 / SL34
+                </p>
+                <p class="mt-3 text-sm text-white/65">
+                  Black currant, brown sugar, grapefruit zest. Bright acidity, clean
+                  finish — no milk required.
+                </p>
+                <dl class="mt-4 space-y-1 text-xs text-white/55">
+                  <div class="flex justify-between gap-2 border-t border-[#3c2a21]/50 pt-2">
+                    <dt>Roast</dt>
+                    <dd class="text-white/80">Light–medium</dd>
+                  </div>
+                  <div class="flex justify-between gap-2">
+                    <dt>Process</dt>
+                    <dd class="text-white/80">Washed</dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+            <article
+              class="bsc-menu-card bsc-reveal flex flex-col overflow-hidden"
+              data-menu-cat="cold"
+              data-vegan="true"
+              data-badges="seasonal"
+            >
+              <div class="relative aspect-[4/3] w-full overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1517701604599-bb29b565ddc9?auto=format&w=720&h=540&fit=crop&q=80&fm=webp"
+                  width="720"
+                  height="540"
+                  class="h-full w-full object-cover"
+                  alt="Cold brew coffee in glass"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span
+                  class="absolute left-2 top-2 bg-[#1b4332]/95 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-white"
+                  >Seasonal</span
+                >
+              </div>
+              <div class="flex flex-1 flex-col p-5">
+                <div class="flex items-start justify-between gap-2">
+                  <h3 class="font-serif text-xl text-[#f4e9d8]">Slow cold concentrate</h3>
+                  <span class="text-sm text-[#c9b8a0]">10 lv</span>
+                </div>
+                <p class="mt-1 text-[11px] uppercase tracking-wider text-white/40">
+                  Cold · rotating single origin
+                </p>
+                <p class="mt-3 text-sm text-white/65">
+                  18-hour steep, diluted to taste. Tasting notes shift with the lot —
+                  ask what’s in the fridge today.
+                </p>
+                <dl class="mt-4 space-y-1 text-xs text-white/55">
+                  <div class="flex justify-between gap-2 border-t border-[#3c2a21]/50 pt-2">
+                    <dt>Roast</dt>
+                    <dd class="text-white/80">Varies</dd>
+                  </div>
+                  <div class="flex justify-between gap-2">
+                    <dt>Process</dt>
+                    <dd class="text-white/80">Lot-dependent</dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+            <article
+              class="bsc-menu-card bsc-reveal flex flex-col overflow-hidden"
+              data-menu-cat="espresso"
+              data-vegan="false"
+              data-badges=""
+            >
+              <div class="relative aspect-[4/3] w-full overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&w=720&h=540&fit=crop&q=80&fm=webp"
+                  width="720"
+                  height="540"
+                  class="h-full w-full object-cover"
+                  alt="Flat white coffee"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="flex flex-1 flex-col p-5">
+                <div class="flex items-start justify-between gap-2">
+                  <h3 class="font-serif text-xl text-[#f4e9d8]">Flat white</h3>
+                  <span class="text-sm text-[#c9b8a0]">11 lv</span>
+                </div>
+                <p class="mt-1 text-[11px] uppercase tracking-wider text-white/40">
+                  Espresso · Guatemala Huehuetenango
+                </p>
+                <p class="mt-3 text-sm text-white/65">
+                  Milk silk, milk chocolate, orange peel. Microfoam, not foam
+                  sculpture.
+                </p>
+                <dl class="mt-4 space-y-1 text-xs text-white/55">
+                  <div class="flex justify-between gap-2 border-t border-[#3c2a21]/50 pt-2">
+                    <dt>Roast</dt>
+                    <dd class="text-white/80">Medium</dd>
+                  </div>
+                  <div class="flex justify-between gap-2">
+                    <dt>Process</dt>
+                    <dd class="text-white/80">Washed</dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+            <article
+              class="bsc-menu-card bsc-reveal flex flex-col overflow-hidden"
+              data-menu-cat="dessert"
+              data-vegan="true"
+              data-badges="vegan seasonal"
+            >
+              <div class="relative aspect-[4/3] w-full overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&w=720&h=540&fit=crop&q=80&fm=webp"
+                  width="720"
+                  height="540"
+                  class="h-full w-full object-cover"
+                  alt="Layered chocolate dessert"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="absolute left-2 top-2 flex flex-wrap gap-1">
+                  <span
+                    class="bg-[#1b4332]/95 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-white"
+                    >Vegan</span
+                  >
+                  <span
+                    class="bg-[#3c2a21]/95 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#f4e9d8]"
+                    >Seasonal</span
+                  >
+                </div>
+              </div>
+              <div class="flex flex-1 flex-col p-5">
+                <div class="flex items-start justify-between gap-2">
+                  <h3 class="font-serif text-xl text-[#f4e9d8]">Dark chocolate crémeux</h3>
+                  <span class="text-sm text-[#c9b8a0]">9 lv</span>
+                </div>
+                <p class="mt-1 text-[11px] uppercase tracking-wider text-white/40">
+                  Dessert · pairs with espresso
+                </p>
+                <p class="mt-3 text-sm text-white/65">
+                  Olive oil, Maldon, 70% cacao. Built to survive a shot of Ethiopia on
+                  the side.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="reviews"
+        class="border-t border-[#3C2A21]/40 scroll-mt-28"
+        aria-labelledby="reviews-heading"
+      >
+        <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 md:px-10 md:py-20">
+          <h2
+            id="reviews-heading"
+            class="bsc-reveal bsc-type-section"
+            data-i18n="reviews_title"
+          >
+            Voices from the bar
+          </h2>
+          <p
+            class="bsc-reveal bsc-type-section-lead max-w-2xl"
+            data-i18n="reviews_lead"
+          >
+            Demo quotes — wire Google Reviews or another API when you go live.
+          </p>
+          <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+            <figure
+              class="bsc-reveal border border-[#3c2a21]/85 bg-white/[0.02] p-6"
+            >
+              <div class="flex items-center gap-3">
+                <img
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&w=128&h=128&fit=crop&q=80&fm=webp"
+                  width="64"
+                  height="64"
+                  class="h-14 w-14 rounded-full object-cover"
+                  alt="Portrait of reviewer Mira"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div>
+                  <figcaption class="font-medium text-[#f4e9d8]">Mira K.</figcaption>
+                  <p class="text-xs text-amber-200/90" aria-label="5 of 5 stars">
+                    ★★★★★
+                  </p>
+                </div>
+              </div>
+              <blockquote
+                class="mt-4 text-sm leading-relaxed text-white/65"
+                data-i18n="reviews_q1"
+              >
+                “Best coffee shop Sofia energy without the attitude. Filter flight was
+                unreal.”
+              </blockquote>
+            </figure>
+            <figure
+              class="bsc-reveal border border-[#3c2a21]/85 bg-white/[0.02] p-6"
+            >
+              <div class="flex items-center gap-3">
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&w=128&h=128&fit=crop&q=80&fm=webp"
+                  width="64"
+                  height="64"
+                  class="h-14 w-14 rounded-full object-cover"
+                  alt="Portrait of reviewer Daniel"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div>
+                  <figcaption class="font-medium text-[#f4e9d8]">Daniel T.</figcaption>
+                  <p class="text-xs text-amber-200/90" aria-label="5 of 5 stars">
+                    ★★★★★
+                  </p>
+                </div>
+              </div>
+              <blockquote
+                class="mt-4 text-sm leading-relaxed text-white/65"
+                data-i18n="reviews_q2"
+              >
+                “Specialty coffee in Sofia usually phones in the pastry — not here.
+                Laptop friendly too.”
+              </blockquote>
+            </figure>
+            <figure
+              class="bsc-reveal border border-[#3c2a21]/85 bg-white/[0.02] p-6"
+            >
+              <div class="flex items-center gap-3">
+                <img
+                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&w=128&h=128&fit=crop&q=80&fm=webp"
+                  width="64"
+                  height="64"
+                  class="h-14 w-14 rounded-full object-cover"
+                  alt="Portrait of reviewer Elena"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div>
+                  <figcaption class="font-medium text-[#f4e9d8]">Elena V.</figcaption>
+                  <p class="text-xs text-amber-200/90" aria-label="4 of 5 stars">
+                    ★★★★☆
+                  </p>
+                </div>
+              </div>
+              <blockquote
+                class="mt-4 text-sm leading-relaxed text-white/65"
+                data-i18n="reviews_q3"
+              >
+                “Third wave coffee Sofia spot I bring out-of-town guests. Booking was
+                instant.”
+              </blockquote>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="instagram"
+        class="border-t border-[#3C2A21]/40 scroll-mt-28"
+        aria-labelledby="ig-heading"
+      >
+        <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:px-10 md:py-16">
+          <h2
+            id="ig-heading"
+            class="bsc-reveal font-serif text-2xl text-[#f4e9d8] sm:text-3xl"
+            data-i18n="ig_title"
+          >
+            @betterspecialtysofia
+          </h2>
+          <p class="bsc-reveal mt-2 text-xs text-[#c9b8a0]" data-i18n="ig_lead">
+            Auto-scroll strip — swap for EmbedSocial / Meta embed or latest Reels API.
+          </p>
+          <div class="bsc-marquee bsc-reveal mt-8" aria-hidden="true">
+            <div class="bsc-marquee-track">
+              <div
+                class="h-40 w-32 shrink-0 border border-[#3c2a21]/80 bg-gradient-to-br from-[#1b4332]/40 to-black"
+              ></div>
+              <div
+                class="h-40 w-32 shrink-0 border border-[#3c2a21]/80 bg-gradient-to-br from-[#3c2a21]/50 to-black"
+              ></div>
+              <div
+                class="h-40 w-32 shrink-0 border border-[#3c2a21]/80 bg-gradient-to-br from-[#5c4033]/40 to-black"
+              ></div>
+              <div
+                class="h-40 w-32 shrink-0 border border-[#3c2a21]/80 bg-gradient-to-br from-[#1b4332]/30 to-black"
+              ></div>
+              <div
+                class="h-40 w-32 shrink-0 border border-[#3c2a21]/80 bg-gradient-to-br from-[#c9b8a0]/20 to-black"
+              ></div>
+              <div
+                class="h-40 w-32 shrink-0 border border-[#3c2a21]/80 bg-gradient-to-br from-[#1b4332]/40 to-black"
+              ></div>
+              <div
+                class="h-40 w-32 shrink-0 border border-[#3c2a21]/80 bg-gradient-to-br from-[#3c2a21]/50 to-black"
+              ></div>
+              <div
+                class="h-40 w-32 shrink-0 border border-[#3c2a21]/80 bg-gradient-to-br from-[#5c4033]/40 to-black"
+              ></div>
+              <div
+                class="h-40 w-32 shrink-0 border border-[#3c2a21]/80 bg-gradient-to-br from-[#1b4332]/40 to-black"
+              ></div>
+              <div
+                class="h-40 w-32 shrink-0 border border-[#3c2a21]/80 bg-gradient-to-br from-[#3c2a21]/50 to-black"
+              ></div>
+              <div
+                class="h-40 w-32 shrink-0 border border-[#3c2a21]/80 bg-gradient-to-br from-[#5c4033]/40 to-black"
+              ></div>
+              <div
+                class="h-40 w-32 shrink-0 border border-[#3c2a21]/80 bg-gradient-to-br from-[#c9b8a0]/20 to-black"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="about"
+        class="border-t border-[#3C2A21]/40 scroll-mt-28"
+        aria-labelledby="about-heading"
+      >
+        <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 md:px-10 md:py-20">
+          <h2
+            id="about-heading"
+            class="bsc-reveal bsc-type-section"
+            data-i18n="about_title"
+          >
+            Why we opened Better
+          </h2>
+          <div
+            class="bsc-reveal mt-10 max-w-3xl space-y-5"
+          >
+            <p class="bsc-type-body" data-i18n="about_p1">
+              We were tired of “specialty” signs on cups that tasted like compromise.
+              Better started as a bet: that Sofia deserved a bar where every dial —
+              grinder, water, time — is treated like the guest can taste arrogance.
+            </p>
+            <p class="bsc-type-body" data-i18n-html="about_p2_html">
+              Philosophy is simple:
+              <strong class="text-[#f4e9d8]">no filler beans</strong>, no hiding roast
+              dates, no mystery milk. The team is small, loud about quality, quiet about
+              ego. Coffee till I die isn’t marketing — it’s the shift we work.
+            </p>
+            <p class="bsc-type-body" data-i18n="about_p3">
+              Skeleton mascot? That’s the wink: we take the craft seriously, not
+              ourselves. Pull up to the bar, ask rude questions about TDS, we’ll answer.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="book"
+        class="border-t border-[#3C2A21]/40 scroll-mt-28"
+        aria-labelledby="book-heading"
+      >
+        <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 md:px-10 md:py-20">
+          <h2
+            id="book-heading"
+            class="bsc-reveal bsc-type-section"
+            data-i18n="book_title"
+          >
+            Book a table
+          </h2>
+          <p class="bsc-reveal bsc-type-section-lead max-w-xl" data-i18n="book_lead">
+            Demo form — connect to your booking engine or Resy / internal sheet later.
+          </p>
+          <form
+            id="booking-form-demo"
+            class="bsc-reveal mt-8 max-w-lg space-y-5 border border-[#3c2a21]/85 bg-black/30 p-6"
+          >
+            <div>
+              <label
+                class="text-[11px] uppercase tracking-[0.2em] text-white/45"
+                for="bf-name"
+                data-i18n="bf_name"
+                >Name</label
+              >
+              <input
+                id="bf-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+                class="mt-2 w-full border border-[#3c2a21]/90 bg-black px-3 py-2.5 text-sm text-white"
+              />
+            </div>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div>
+                <label
+                  class="text-[11px] uppercase tracking-[0.2em] text-white/45"
+                  for="bf-date"
+                  data-i18n="bf_date"
+                  >Date</label
+                >
+                <input
+                  id="bf-date"
+                  name="date"
+                  type="date"
+                  required
+                  class="mt-2 w-full border border-[#3c2a21]/90 bg-black px-3 py-2.5 text-sm text-white"
+                />
+              </div>
+              <div>
+                <label
+                  class="text-[11px] uppercase tracking-[0.2em] text-white/45"
+                  for="bf-time"
+                  data-i18n="bf_time"
+                  >Time</label
+                >
+                <input
+                  id="bf-time"
+                  name="time"
+                  type="time"
+                  required
+                  class="mt-2 w-full border border-[#3c2a21]/90 bg-black px-3 py-2.5 text-sm text-white"
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                class="text-[11px] uppercase tracking-[0.2em] text-white/45"
+                for="bf-guests"
+                data-i18n="bf_guests"
+                >Guests</label
+              >
+              <select
+                id="bf-guests"
+                name="guests"
+                class="mt-2 w-full border border-[#3c2a21]/90 bg-black px-3 py-2.5 text-sm text-white"
+              >
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5+</option>
+              </select>
+            </div>
+            <button
+              type="submit"
+              class="bsc-btn-forest w-full border py-3 text-xs font-semibold uppercase tracking-[0.2em]"
+              data-i18n="bf_submit"
+            >
+              Request table (demo)
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section
+        id="order"
+        class="border-t border-[#3C2A21]/40 scroll-mt-28"
+        aria-labelledby="order-heading"
+      >
+        <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:px-10 md:py-16">
+          <h2
+            id="order-heading"
+            class="bsc-reveal font-serif text-2xl text-[#f4e9d8] sm:text-3xl"
+            data-i18n="order_title"
+          >
+            Order ahead
+          </h2>
+          <p class="bsc-reveal mt-3 max-w-2xl text-sm text-white/65" data-i18n="order_lead">
+            Takeaway, preorder, pickup — hook Shopify, GloriaFood, or your POS webhook
+            here. For now these are intent buttons (demo).
+          </p>
+          <div class="bsc-reveal mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <span class="bsc-magnetic inline-flex w-full sm:w-auto"
+              ><button
+                type="button"
+                class="bsc-cta-secondary w-full sm:w-auto"
+                data-order-demo="takeaway"
+                data-i18n="ord_takeaway"
+              >
+                Takeaway
+              </button></span
+            >
+            <span class="bsc-magnetic inline-flex w-full sm:w-auto"
+              ><button
+                type="button"
+                class="bsc-cta-secondary w-full sm:w-auto"
+                data-order-demo="preorder"
+                data-i18n="ord_preorder"
+              >
+                Preorder
+              </button></span
+            >
+            <span class="bsc-magnetic inline-flex w-full sm:w-auto"
+              ><button
+                type="button"
+                class="bsc-cta-secondary w-full sm:w-auto"
+                data-order-demo="pickup"
+                data-i18n="ord_pickup"
+              >
+                Pickup slot
+              </button></span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="visit"
+        class="border-t border-[#3C2A21]/40 scroll-mt-28"
+        aria-labelledby="visit-heading"
+      >
+        <div class="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 md:px-10 md:py-20">
+          <div>
+            <h2
+              id="visit-heading"
+              class="bsc-reveal bsc-type-section"
+              data-i18n="visit_title"
+            >
+              Visit
+            </h2>
+            <p class="bsc-reveal mt-4 text-sm text-white/65" data-i18n-html="visit_blurb_html">
+              <strong class="text-[#f4e9d8]">12 Vitosha Blvd</strong> (demo address —
+              replace). Sofia city center. Google Maps pin below is approximate for
+              local SEO preview.
+            </p>
+            <dl class="bsc-reveal mt-8 space-y-3 text-sm text-white/70">
+              <div>
+                <dt
+                  class="text-[10px] uppercase tracking-[0.25em] text-white/40"
+                  data-i18n="visit_hours_wd"
+                >
+                  Mon–Fri
+                </dt>
+                <dd data-i18n="visit_hours_val_wd">7:30 — 21:00</dd>
+              </div>
+              <div>
+                <dt
+                  class="text-[10px] uppercase tracking-[0.25em] text-white/40"
+                  data-i18n="visit_hours_we"
+                >
+                  Sat–Sun
+                </dt>
+                <dd data-i18n="visit_hours_val_we">8:00 — 22:00</dd>
+              </div>
+              <div>
+                <dt
+                  class="text-[10px] uppercase tracking-[0.25em] text-white/40"
+                  data-i18n="visit_phone"
+                >
+                  Phone
+                </dt>
+                <dd><a class="underline decoration-[#3c2a21] hover:text-white" href="tel:+359888000000">+359 888 000 000</a></dd>
+              </div>
+            </dl>
+          </div>
+          <div class="bsc-reveal min-h-[280px] overflow-hidden border border-[#3c2a21]/80">
+            <iframe
+              data-i18n-title="map_iframe_title"
+              title="Map — Better Specialty Coffee Sofia (approximate)"
+              class="h-[320px] w-full grayscale sm:h-[360px]"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=23.308%2C42.682%2C23.338%2C42.712&amp;layer=mapnik"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="shop"
+        class="border-t border-[#3C2A21]/40 scroll-mt-28"
+        aria-labelledby="shop-heading"
+      >
+        <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 md:px-10 md:py-24">
+          <h2
+            id="shop-heading"
+            class="text-xs font-semibold tracking-[0.3em] uppercase text-white/40"
+            data-i18n="shop_title"
+          >
+            The Bean Matrix
+          </h2>
+          <p
+            class="mt-4 max-w-2xl text-sm leading-relaxed text-white/60 sm:text-base"
+            data-i18n="shop_lead"
+          >
+            Hunt by sensory tag. Your Coffee Concierge plan (below) decides how wild
+            the lineup gets—rotational chaos for the curious, fixed steel for the
+            daily driver.
+          </p>
+
+          <fieldset
+            class="mt-10 border border-[#3C2A21]/80 bg-white/[0.02] px-5 py-7 sm:mt-12 sm:px-6 sm:py-8 md:px-8"
+          >
+            <legend
+              class="text-[11px] font-semibold tracking-[0.28em] uppercase text-white/45"
+              data-i18n="flavor_legend"
+            >
+              Flavor notes
+            </legend>
+            <p id="flavor-filter-hint" class="mt-2 text-sm text-white/45" data-i18n="flavor_hint">
+              Match any selected note. Leave them blank to see the full matrix for
+              your plan.
+            </p>
+            <div
+              class="mt-6 flex flex-wrap gap-4"
+              role="group"
+              aria-describedby="flavor-filter-hint"
+            >
+              <label
+                class="flex cursor-pointer items-center gap-3 border border-[#3C2A21]/90 px-4 py-3 text-sm tracking-wide transition-[border-color,background-color] duration-300 has-[:checked]:border-[#1B4332] has-[:checked]:bg-[#1B4332]/25"
+              >
+                <input
+                  type="checkbox"
+                  name="flavor-note"
+                  value="fruity"
+                  class="bsc-checkbox h-4 w-4"
+                />
+                <span data-i18n="note_fruity">Fruity</span>
+              </label>
+              <label
+                class="flex cursor-pointer items-center gap-3 border border-[#3C2A21]/90 px-4 py-3 text-sm tracking-wide transition-[border-color,background-color] duration-300 has-[:checked]:border-[#1B4332] has-[:checked]:bg-[#1B4332]/25"
+              >
+                <input
+                  type="checkbox"
+                  name="flavor-note"
+                  value="chocolatey"
+                  class="bsc-checkbox h-4 w-4"
+                />
+                <span data-i18n="note_chocolatey">Chocolatey</span>
+              </label>
+              <label
+                class="flex cursor-pointer items-center gap-3 border border-[#3C2A21]/90 px-4 py-3 text-sm tracking-wide transition-[border-color,background-color] duration-300 has-[:checked]:border-[#1B4332] has-[:checked]:bg-[#1B4332]/25"
+              >
+                <input
+                  type="checkbox"
+                  name="flavor-note"
+                  value="floral"
+                  class="bsc-checkbox h-4 w-4"
+                />
+                <span data-i18n="note_floral">Floral</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <p
+            id="bean-matrix-status"
+            class="mt-8 text-sm text-white/50"
+            aria-live="polite"
+          ></p>
+
+          <div
+            id="bean-matrix-grid"
+            class="mt-8 grid grid-cols-1 gap-5 sm:mt-10 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3"
+          ></div>
+        </div>
+      </section>
+
+      <section
+        id="guides"
+        class="border-t border-[#3C2A21]/40 scroll-mt-28"
+        aria-labelledby="guides-heading"
+      >
+        <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 md:px-10 md:py-24">
+          <h2
+            id="guides-heading"
+            class="text-xs font-semibold tracking-[0.3em] uppercase text-white/40"
+            data-i18n="guides_title"
+          >
+            Integrated brewing intelligence
+          </h2>
+          <p
+            class="mt-4 max-w-2xl text-sm leading-relaxed text-white/60 sm:text-base"
+            data-i18n="guides_lead"
+          >
+            Lock your numbers before you touch the kettle. Dial water from mass and
+            ratio—V60 or AeroPress—then chase the cup, not the guesswork.
+          </p>
+
+          <form
+            id="brew-calculator-form"
+            class="mt-10 max-w-xl border border-[#3C2A21]/85 bg-white/[0.02] p-5 sm:mt-12 sm:p-6 md:p-8"
+            novalidate
+          >
+            <div class="space-y-8">
+              <div>
+                <label
+                  for="brew-method"
+                  class="block text-[11px] font-semibold tracking-[0.28em] uppercase text-white/45"
+                  data-i18n="brew_method"
+                  >Method</label
+                >
+                <select
+                  id="brew-method"
+                  name="method"
+                  class="mt-3 w-full border border-[#3C2A21]/90 bg-black px-4 py-3 text-sm text-white transition-[border-color,box-shadow] duration-300 focus:border-[#1B4332] focus:outline-none focus:ring-1 focus:ring-[#2D6A4F]/60"
+                >
+                  <option value="v60" data-i18n="brew_v60">V60</option>
+                  <option value="aeropress" data-i18n="brew_aero">AeroPress</option>
+                </select>
+                <p id="brew-method-hint" class="mt-2 text-xs text-white/40"></p>
+              </div>
+
+              <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+                <div>
+                  <label
+                    for="brew-coffee-g"
+                    class="block text-[11px] font-semibold tracking-[0.28em] uppercase text-white/45"
+                    data-i18n="brew_coffee"
+                    >Coffee (g)</label
+                  >
+                  <input
+                    id="brew-coffee-g"
+                    name="coffeeG"
+                    type="number"
+                    inputmode="decimal"
+                    min="1"
+                    step="0.1"
+                    value="20"
+                    class="mt-3 w-full border border-[#3C2A21]/90 bg-black px-4 py-3 text-sm text-white transition-[border-color,box-shadow] duration-300 focus:border-[#1B4332] focus:outline-none focus:ring-1 focus:ring-[#2D6A4F]/60"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="brew-ratio"
+                    class="block text-[11px] font-semibold tracking-[0.28em] uppercase text-white/45"
+                    data-i18n="brew_ratio"
+                    >Ratio (1 : n water)</label
+                  >
+                  <input
+                    id="brew-ratio"
+                    name="ratio"
+                    type="number"
+                    inputmode="decimal"
+                    min="1"
+                    step="0.5"
+                    value="16"
+                    class="mt-3 w-full border border-[#3C2A21]/90 bg-black px-4 py-3 text-sm text-white transition-[border-color,box-shadow] duration-300 focus:border-[#1B4332] focus:outline-none focus:ring-1 focus:ring-[#2D6A4F]/60"
+                  />
+                  <p class="mt-2 text-xs text-white/40" data-i18n="brew_ratio_cap">
+                    1 g coffee : n g water
+                  </p>
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                class="bsc-btn-forest w-full border px-6 py-3.5 text-xs font-semibold tracking-[0.2em] uppercase sm:w-auto"
+                data-i18n="brew_submit"
+              >
+                Calculate water
+              </button>
+            </div>
+          </form>
+
+          <div
+            id="brew-result"
+            class="mt-8 max-w-xl border border-[#3C2A21]/90 bg-[#1B4332]/15 px-5 py-6 text-sm text-white/85 sm:px-6"
+            role="status"
+            aria-live="polite"
+            hidden
+          ></div>
+        </div>
+      </section>
+
+      <section
+        id="subscription"
+        class="border-t border-[#3C2A21]/40 scroll-mt-28"
+        aria-labelledby="sub-heading"
+      >
+        <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 md:px-10 md:pb-28 md:pt-24">
+          <h2
+            id="sub-heading"
+            class="text-xs font-semibold tracking-[0.3em] uppercase text-white/40"
+            data-i18n="sub_title"
+          >
+            Coffee Concierge
+          </h2>
+          <p
+            class="mt-4 max-w-2xl text-sm leading-relaxed text-white/60 sm:text-base"
+            data-i18n="sub_lead"
+          >
+            Premium subscription logic: go rotational and chase the rare, or lock
+            fixed and let the same ruthless profile meet you every morning. Either
+            way, the Matrix above obeys your call.
+          </p>
+
+          <fieldset
+            class="mt-10 max-w-xl border border-[#3C2A21]/85 bg-white/[0.02] px-5 py-7 sm:mt-12 sm:px-6 sm:py-8 md:px-8"
+          >
+            <legend
+              class="text-[11px] font-semibold tracking-[0.28em] uppercase text-white/45"
+              data-i18n="sub_plan"
+            >
+              Plan
+            </legend>
+            <div
+              class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-0 sm:border sm:border-[#3C2A21]/90"
+              role="radiogroup"
+              data-i18n-aria="sub_radiogroup_aria"
+              aria-label="Coffee Concierge plan"
+            >
+              <label
+                class="bsc-plan-label flex min-h-[3.25rem] cursor-pointer items-center justify-center border border-[#3C2A21]/90 px-4 py-4 text-center text-xs font-semibold tracking-[0.2em] uppercase sm:border-r sm:border-[#3C2A21]/90"
+              >
+                <input
+                  type="radio"
+                  name="concierge-plan"
+                  value="rotational"
+                  class="sr-only"
+                  checked
+                />
+                <span data-i18n="sub_rot">Rotational</span>
+              </label>
+              <label
+                class="bsc-plan-label flex min-h-[3.25rem] cursor-pointer items-center justify-center border border-[#3C2A21]/90 px-4 py-4 text-center text-xs font-semibold tracking-[0.2em] uppercase sm:border-0"
+              >
+                <input
+                  type="radio"
+                  name="concierge-plan"
+                  value="fixed"
+                  class="sr-only"
+                />
+                <span data-i18n="sub_fix">Fixed</span>
+              </label>
+            </div>
+            <p id="plan-description" class="mt-6 text-sm leading-relaxed text-white/55"></p>
+          </fieldset>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="border-t border-[#3C2A21]/70 px-4 py-10 text-center text-[10px] leading-relaxed tracking-[0.18em] text-[#c9b8a0] sm:py-12 sm:text-[11px]"
+      data-i18n="footer_note"
+    >
+      Better Specialty Coffee · Sofia · Replace demo photos, address, canonical URL,
+      and OG links before launch. Grain + forest accents stay.
+    </footer>
+
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
